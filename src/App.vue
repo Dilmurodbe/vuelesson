@@ -1,16 +1,18 @@
 <template>
- <Vmodel/> 
+  <Uyishi/>
+ <!-- <Vmodel/>  -->
   <!-- <Apia/>  -->
 </template>
 
 <script>
-
- import  Vmodel from './components/Vmodel.vue';
+import Uyishi from './components/Uyishi.vue'
+//  import  Vmodel from './components/Vmodel.vue';
 // import  Apia from './components/Apia.vue';
 export default {
   name: 'App',
   components: {
- Vmodel,
+    Uyishi,
+//  Vmodel,
     // Apia
   }
 }
