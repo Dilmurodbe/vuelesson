@@ -44,14 +44,10 @@ export default {
       this.form.text = item.text;
     },
 
-    remove() {  
-      this.fullname.forEach((item, index) => {
-        if (item) {
-          this.fullname.pop(index, 1);
-          localStorage.removeItem("info");
-          console.log(item);
-        }
-      });
+    remove(item) {
+      let index = this.fullname.indexOf(item);
+      this.fullname.splice(index, 1);
+      localStorage.setItem("info", JSON.stringify(this.fullname));
     },
   },
 };
@@ -74,7 +70,7 @@ export default {
             :key="item.id"
           >
             <p>{{ item.text }}</p>
-            <Button @click="remove" class="button1" name=" x " />
+            <Button @click="remove(item)" class="button1" name=" x " />
             <Button
               @click="updateFunction(item)"
               class="button1"
