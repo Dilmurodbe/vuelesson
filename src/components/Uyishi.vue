@@ -45,8 +45,7 @@ export default {
     },
 
     remove(item) {
-      let index = this.fullname.indexOf(item);
-      this.fullname.splice(index, 1);
+  
       localStorage.setItem("info", JSON.stringify(this.fullname));
     },
   },
@@ -64,12 +63,8 @@ export default {
           </div>
         </div>
         <div class="footer-div d-flex flex-column">
-          <h3
-            class="text-white d-flex justify-content-between"
-            v-for="item in fullname"
-            :key="item.id"
-          >
-            <p>{{ item.text }}</p>
+          <h3 class="text-white d-flex justify-content-between">
+            <p>{{ fullname.length }}</p>
             <Button @click="remove(item)" class="button1" name=" x " />
             <Button
               @click="updateFunction(item)"
