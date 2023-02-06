@@ -35,7 +35,7 @@ export default {
         }
       }
     },
-    updateFunction(item) {
+    updateFunction(item) {      
       this.form.text = item.text;
       this.update = true;
       this.currentindex = this.fullname.findIndex(
@@ -45,8 +45,10 @@ export default {
     },
 
     remove(item) {
-  
+      let index = this.fullname.indexOf(item);
+      this.fullname.splice(index, 1);
       localStorage.setItem("info", JSON.stringify(this.fullname));
+      console.log(item);
     },
   },
 };
@@ -63,8 +65,12 @@ export default {
           </div>
         </div>
         <div class="footer-div d-flex flex-column">
-          <h3 class="text-white d-flex justify-content-between">
-            <p>{{ fullname.length }}</p>
+          <h3
+            class="text-white d-flex justify-content-between"
+            v-for="item in fullname"
+            :key="item"
+          >
+            <p>{{ item.text }}</p>
             <Button @click="remove(item)" class="button1" name=" x " />
             <Button
               @click="updateFunction(item)"
