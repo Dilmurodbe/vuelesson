@@ -1,21 +1,26 @@
-<script>
-import Vuexvue from "./components/Vuex.vue";
-import Saidbar from "./components/Saidbar.vue";
-import Uyishi from "./components/Uyishi.vue"; 
-export default {
-  components: {
-    Vuexvue,
-    Saidbar,
-    Uyishi,
-  },
-};
-</script>
-
 <template>
-  <Vuexvue />
-  <Saidbar />
-  <Uyishi />
-  <!-- <RouterView></RouterView> -->
+  <!-- <section>
+    <input type="tel" v-mask="'(##) ###-##-##'" />
+  </section> -->
+<Api2/>
 </template>
 
-<style></style>
+<script>
+// import {mask} from 'vue-the-mask' 
+import Api2 from './components/Api2.vue';
+export default {
+    components: {  Api2 }
+}
+
+</script>
+
+<style>
+/* section {
+  width: 100%;
+  background-color: aquamarine;
+  height: 500px;
+} */
+
+
+
+</style>
