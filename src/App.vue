@@ -7,7 +7,7 @@
 
 <script>
 // import {mask} from 'vue-the-mask' 
-import Api2 from './components/Api2.vue';
+import Api2 from './components/Login.vue';
 export default {
     components: {  Api2 }
 }

@@ -55,7 +55,7 @@ export default {
         </div>
 
 
-        <div  style="background-color: aqua;" v-if="data.length === 0" >
+        <div  style="background-color: aqua;" v-if="data.length === undifind" >
         <h1 class="not">Not found</h1>
         </div>
         <div v-else  class="col-3 "  v-for="item in data" :key="item.id"  >
